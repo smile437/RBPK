@@ -1,0 +1,30 @@
+﻿@model MvcApplication1.Models.UserProfile
+
+   @{ViewBag.Title = "StartLearn";}
+
+<h1>Choose a friend</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>List of users</title>
+</head>
+<body>
+    <table border="1" width="1000">
+        <tr>
+            <th>Name</th>
+            <th>Native language</th>
+            <th>Languages to lern</th>
+            <th>Topics to talk</th>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(m => m.Name)</td>
+            <td>@Html.DisplayTextFor(m => m.Native_Language)</td>
+            <td>@Html.DisplayTextFor(m => m.what_language_you_want_to_learn)</td>
+            <td>@Html.DisplayTextFor(m => m.Talk_topics)</td>
+        </tr>
+    </table>
+</body>
+</html>
